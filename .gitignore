@@ -26,7 +26,6 @@ android/.classpath
 android/.gradle
 android/gradle/
 android/.settings
-android/dist/
 android/launch-*
 android/example/
 nbproject
