@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 4
+architectures: arm64-v8a armeabi-v7a x86 x86_64
+description: ti.thermalprinter
+author: Michael Gangolf
+license: Specify your license
+copyright: Copyright (c) 2021 by Michael Gangolf
+
+# these should not be edited
+name: ti.thermalprinter
+moduleid: ti.thermalprinter
+guid: 7e8e0fc5-6101-4f03-bca3-a92a4a572914
+platform: android
+minsdk: 9.0.0.GA
