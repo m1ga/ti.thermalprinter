@@ -5,5 +5,11 @@
 		configuration in <iphone> and <android> sections
 	-->
 	<android xmlns:android="http://schemas.android.com/apk/res/android">
+		<manifest>
+			<uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+			<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+			<uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+			<uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+		</manifest>
 	</android>
 </ti:module>

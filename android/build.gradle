@@ -3,5 +3,6 @@ repositories {
 }
 
 dependencies {
+  implementation 'pub.devrel:easypermissions:3.0.0'
 	implementation 'com.github.DantSu:ESCPOS-ThermalPrinter-Android:3.0.1'
 }
