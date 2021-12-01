@@ -19,6 +19,7 @@ repositories {
 
 ## Methods
 
+* `requestPermissions()`
 * `print({connection, text, [ip, port, timeout, dpi, width, cpl});`
   * `connection`: TYPE_BLUETOOTH | TYPE_TCP
   * `text`: actual text. See https://github.com/DantSu/ESCPOS-ThermalPrinter-Android#formatted-text--syntax-guide for syntax<br/><br/>
@@ -40,8 +41,7 @@ ThermalPrinter.print({
         "[L]1234 place\n" +
         "[L]Tel : +123456\n" +
         "[L]\n" +
-        "[C]<barcode type='ean13' height='10'>123456</barcode>\n" +
-        "[C]<qrcode size='20'>http://www.migaweb.de/</qrcode>";
+        "[C]<qrcode size='20'>http://www.migaweb.de/</qrcode>"
 });
 ```
 
