@@ -1,6 +1,6 @@
 # Ti.Thermalprinter - ESC/POS thermal printer library for Titanium (Android)
 
-Appcelerator Titanium library that implements https://github.com/DantSu/ESCPOS-ThermalPrinter-Android to print with (Bluetooth, TCP) ESC/POS thermal printer
+Appcelerator Titanium library that implements https://github.com/DantSu/ESCPOS-ThermalPrinter-Android to print with (Bluetooth, TCP, USB) ESC/POS thermal printer
 
 ## Installation
 
@@ -16,12 +16,13 @@ repositories {
 ## Constants
 * TYPE_BLUETOOTH
 * TYPE_TCP
+* TYPE_USB
 
 ## Methods
 
 * `requestPermissions()`
 * `print({connection, text, [ip, port, timeout, dpi, width, cpl});`
-  * `connection`: TYPE_BLUETOOTH | TYPE_TCP
+  * `connection`: TYPE_BLUETOOTH | TYPE_TCP | TYPE_USB
   * `text`: actual text. See https://github.com/DantSu/ESCPOS-ThermalPrinter-Android#formatted-text--syntax-guide for syntax<br/><br/>
 
   if `connection` is `TYPE_TCP` you have to set:
@@ -32,7 +33,7 @@ repositories {
 ```js
 const ThermalPrinter = require("ti.thermalprinter");
 ThermalPrinter.print({
-  type: ThermalPrinter.TYPE_BLUETOOTH,
+  connection: ThermalPrinter.TYPE_BLUETOOTH,
   text: "[C]================================\n" +
         "[L]\n" +
         "[L]<font size='tall'>Customer :</font>\n" +
@@ -47,7 +48,6 @@ ThermalPrinter.print({
 
 ## TODO
 
-* add support for USB
 * add support for images
 * add "getList" to select a different printer. Currently it will use the first one
 
