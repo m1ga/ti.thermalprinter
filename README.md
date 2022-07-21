@@ -28,6 +28,9 @@ repositories {
   if `connection` is `TYPE_TCP` you have to set:
   * `ip` (String), `port`, `dpi`, `width` and `cpl` (characters per line)
 
+* `getUSBList()` prints a list of connected USB devices to the console. Only for debug at the moment
+* `scanPrinters()` prints a list of BLE devices to the console. Only for debug at the moment
+
 ## Example
 
 ```js

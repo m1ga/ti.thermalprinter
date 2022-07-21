@@ -83,6 +83,15 @@ public class TiThermalprinterModule extends KrollModule implements EasyPermissio
         }
     }
 
+
+    @Kroll.method
+    public void getUSBList() {
+        UsbConnection[] usbConnections = new UsbPrintersConnections(TiApplication.getAppCurrentActivity()).getList();
+        for (UsbConnection usbConnection : usbConnections) {
+            Log.i("printer", usbConnection.getDevice().getDeviceName());
+        }
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Kroll.method
     public void requestPermissions() {
@@ -177,7 +186,7 @@ public class TiThermalprinterModule extends KrollModule implements EasyPermissio
                             android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S ? PendingIntent.FLAG_MUTABLE : 0
                     );
                     IntentFilter filter = new IntentFilter(ACTION_USB_PERMISSION);
-                    TiApplication.getAppCurrentActivity().registerReceiver(this.usbReceiver, filter);
+                    TiApplication.getAppCurrentActivity().registerReceiver(usbReceiver, filter);
                     usbManager.requestPermission(usbConnection.getDevice(), permissionIntent);
                 }
             }
